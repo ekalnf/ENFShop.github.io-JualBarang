@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ENFShop - Login Berhasil</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="logoENFShop.png">
+  <style>
+    .success-container {
+      text-align: center;
+      padding: 3rem;
+      max-width: 600px;
+      margin: 2rem auto;
+      background: white;
+      border-radius: 1.5rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+    .success-icon {
+      color: var(--success);
+      font-size: 4rem;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar">
+      <div class="nav-container">
+        <a class="nav-brand"><img src="logoENFShop.png" class="logoENFShop">ENFShop</a>
+        <button class="hamburger">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link active">Beranda</a></li>
+          <li><a href="login.html" class="nav-link">Login</a></li>
+          <li><a href="profile.html" class="nav-link">Profil</a></li>
+          <li><a href="transaction.html" class="nav-link">Transaksi</a></li>
+        </ul>
+      </div>
+    </nav>  
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="success-container">
+        <div class="success-icon">✓</div>
+        <h2>Login Berhasil!</h2>
+        <p>Selamat datang kembali di ENFShop</p>
+        <p id="userEmail"></p>
+        <button class="btn btn-primary" onclick="window.location.href='index.html'">Kembali ke Beranda</button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Tentang ENFShop</h3>
+        <p>ENFShop adalah platform jual beli barang bekas berkualitas yang menghubungkan penjual dan pembeli dalam transaksi yang aman dan terpercaya.</p>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Kontak Kami</h3>
+        <ul class="contact-list">
+          <li><i class="fas fa-map-marker-alt"></i> Jl. Yogya No. 123, Bogor</li>
+          <li><i class="fas fa-phone"></i> +62 812-3456-7890</li>
+          <li><i class="fas fa-envelope"></i> info@enfshop.id</li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Ikuti Kami</h3>
+        <div class="social-links">
+          <a href="#" class="social-link facebook">
+            <i class="fab fa-facebook-f"></i>
+            <span>ENFShop Official Facebook</span>
+          </a>
+          <a href="#" class="social-link twitter">
+            <i class="fab fa-twitter"></i>
+            <span>@enfshop_id Twitter</span>
+          </a>
+          <a href="#" class="social-link instagram">
+            <i class="fab fa-instagram"></i>
+            <span>@enfshop.id Instagram</span>
+          </a>
+          <a href="#" class="social-link linkedin">
+            <i class="fab fa-linkedin-in"></i>
+            <span>@EnfShop.official LinkedIn</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 ENFShop. Hak Cipta Dilindungi.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const userEmail = sessionStorage.getItem('userEmail');
+      if (userEmail) {
+        document.getElementById('userEmail').textContent = `Login sebagai: ${userEmail}`;
+      }
+    });
+  </script>
+</body>
+</html>
