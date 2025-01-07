@@ -698,7 +698,6 @@
     width: 20px;
   }
   
-  /* Updated social links styles */
   .social-links {
     display: flex;
     flex-direction: column;
@@ -716,7 +715,7 @@
     transition: all 0.3s ease;
   }
   
-  /* Specific styles for each social media platform */
+
   .social-link.facebook {
     background: #1877f2;
   }
@@ -749,7 +748,6 @@
     font-weight: 500;
   }
   
-  /* Hover effects for each platform */
   .social-link.facebook:hover {
     background: #0d6efd;
   }
